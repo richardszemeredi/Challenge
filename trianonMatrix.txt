@@ -48,6 +48,18 @@ namespace KeszthelySprint
                 foreach (string item in sorsz)
                     Console.Write(item + " ");
             }
+            TimeSpan minido = TimeSpan.MaxValue;
+            string min = "";
+            for (int i = 0; i < sorok.Length; i++)
+            {
+                if (eredmenyek[i, 3] == "n" && TimeSpan.Parse(eredmenyek[i, 5]) + TimeSpan.Parse(eredmenyek[i, 6]) + TimeSpan.Parse(eredmenyek[i, 7]) + TimeSpan.Parse(eredmenyek[i, 8]) + TimeSpan.Parse(eredmenyek[i, 9]) < minido)
+                {
+                    minido = TimeSpan.Parse(eredmenyek[i, 5]) + TimeSpan.Parse(eredmenyek[i, 6]) + TimeSpan.Parse(eredmenyek[i, 7]) + TimeSpan.Parse(eredmenyek[i, 8]) + TimeSpan.Parse(eredmenyek[i, 9]);
+                    min = eredmenyek[i, 0];
+                }
+            }
+            Console.WriteLine("\n6. feladat: A legjobb időt {0} érte el", min);
+            Console.ReadKey();
         }
     }
 }
