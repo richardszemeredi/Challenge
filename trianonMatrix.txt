@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +21,7 @@ namespace KeszthelySprint
                     eredmenyek[i, j] = egysor[i];
                 }
             }       
-            Console.WriteLine("2. feladat: A versenyt {0} versernyzı fejezte be.", sorok.Length);  
+            Console.WriteLine("2. feladat: A versenyt {0} versernyz≈ë fejezte be.", sorok.Length);  
             int el = 0;
             int ossz = 0;
             for (int i = 0; i < sorok.Length; i++)
@@ -30,7 +30,7 @@ namespace KeszthelySprint
                     el++;
                 ossz += (2014 - Convert.ToInt32(eredmenyek[i, 2]));
             }
-            Console.WriteLine("3. feladat? Versenyzık sz·ma az elit junior kategÛri·ban: {1} fı", el);
+            Console.WriteLine("3. feladat? Versenyz≈ëk sz√°ma az elit junior kateg√≥ri√°ban: {1} f≈ë", el);
         }
     }
 }
