@@ -18,7 +18,7 @@ namespace KeszthelySprint
                 string[] egysor = sorok[i].Split(';');
                 for (int j = 0; j < 10; j++)
                 {
-                    eredmenyek[i, j] = egysor[j];
+                    eredmenyek[i, j] = egysor[i];
                 }
             }         
 
