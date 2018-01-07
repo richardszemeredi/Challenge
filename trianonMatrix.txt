@@ -22,7 +22,15 @@ namespace KeszthelySprint
                 }
             }       
             Console.WriteLine("2. feladat: A versenyt {0} versernyzõ fejezte be.", sorok.Length);  
-
+            int el = 0;
+            int ossz = 0;
+            for (int i = 0; i < sorok.Length; i++)
+            {
+                if (eredmenyek[i, 4] == "elit junior")
+                    el++;
+                ossz += (2014 - Convert.ToInt32(eredmenyek[i, 2]));
+            }
+            Console.WriteLine("3. feladat? Versenyzõk száma az elit junior kategóriában: {1} fõ", el);
         }
     }
 }
