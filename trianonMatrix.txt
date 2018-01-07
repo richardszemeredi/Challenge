@@ -32,6 +32,8 @@ namespace KeszthelySprint
             }
             Console.WriteLine("3. feladat? Versenyzők száma az elit junior kategóriában: {1} fő", el);
             Console.WriteLine("4. feladat: Átlagéletkor: {0}", osz / sorok.Length);
+            Console.Write("\n5. feladat: Kérek egy kategóriát: ");
+            string kateg = Console.ReadLine();
         }
     }
 }
