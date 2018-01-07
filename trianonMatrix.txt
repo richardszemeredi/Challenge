@@ -34,6 +34,20 @@ namespace KeszthelySprint
             Console.WriteLine("4. feladat: Átlagéletkor: {0}", osz / sorok.Length);
             Console.Write("\n5. feladat: Kérek egy kategóriát: ");
             string kateg = Console.ReadLine();
+            List<string> sorsz = new List<string>();
+            for (int i = 1; i < sorok.Length; i++)
+            {
+                if (eredmenyek[i, 4] == kateg)
+                    sorsz.Add(eredmenyek[i, 2]);
+            }
+            Console.Write("\n\tRajtszám(ok): ");
+            if (sorsz.Count == 0)
+                Console.Write("Nincs ilyen kategória!");
+            else
+            {
+                foreach (string item in sorsz)
+                    Console.Write(item + " ");
+            }
         }
     }
 }
