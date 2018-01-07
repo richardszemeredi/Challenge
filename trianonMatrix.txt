@@ -11,6 +11,16 @@ namespace KeszthelySprint
     {
         static void Main(string[] args)
         {
+            string[] sorok = File.ReadAllLines("Eredmenyek.txt", Encoding.Default);
+            string[,] eredmenyek = new string[sorok.Length, 10];
+            for (int i = 0; i < sorok.Length; i++)
+            {
+                string[] egysor = sorok[i].Split(';');
+                for (int j = 0; j < 10; j++)
+                {
+                    eredmenyek[i, j] = egysor[j];
+                }
+            }         
 
         }
     }
