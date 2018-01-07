@@ -20,7 +20,8 @@ namespace KeszthelySprint
                 {
                     eredmenyek[i, j] = egysor[i];
                 }
-            }         
+            }       
+            Console.WriteLine("2. feladat: A versenyt {0} versernyzõ fejezte be.", sorok.Length);  
 
         }
     }
