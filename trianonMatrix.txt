@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,20 +18,21 @@ namespace KeszthelySprint
                 string[] egysor = sorok[i].Split(';');
                 for (int j = 0; j < 10; j++)
                 {
-                    eredmenyek[i, j] = egysor[i];
+                    eredmenyek[i, j] = egysor[j]; //HIBA!
                 }
-            }       
-            Console.WriteLine("2. feladat: A versenyt {0} versernyző fejezte be.", sorok.Length);  
+            }
+            Console.WriteLine("2. feladat: A versenyt {0} versernyző fejezte be.", sorok.Length); //HIBA!
             int el = 0;
-            int ossz = 0;
+            float ossz = 0;
             for (int i = 0; i < sorok.Length; i++)
             {
                 if (eredmenyek[i, 4] == "elit junior")
                     el++;
-                ossz += (2014 - Convert.ToInt32(eredmenyek[i, 2]));
+                ossz += (2014 - Convert.ToInt32(eredmenyek[i, 1])); //HIBA!
+                //Console.WriteLine(Convert.ToInt32(eredmenyek[i, 2]));
             }
-            Console.WriteLine("3. feladat? Versenyzők száma az elit junior kategóriában: {1} fő", el);
-            Console.WriteLine("4. feladat: Átlagéletkor: {0}", osz / sorok.Length);
+            Console.WriteLine("3. feladat? Versenyzők száma az elit junior kategóriában: {0} fő", el);
+            Console.WriteLine("4. feladat: Átlagéletkor: {0}", Math.Round(ossz / sorok.Length, 2));
             Console.Write("\n5. feladat: Kérek egy kategóriát: ");
             string kateg = Console.ReadLine();
             List<string> sorsz = new List<string>();
